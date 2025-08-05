@@ -12,6 +12,7 @@ public class LoginFeature {
 	private WebElement password_textbox;
 	private WebElement login_button;
 	private WebElement dasboard_text;
+	private WebElement login;
 	
 	
 	
