@@ -1,111 +1,314 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="2" failed="1" skipped="7">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-06T17:41:15 IST" name="Default suite" finished-at="2025-08-06T17:42:29 IST" duration-ms="73793">
+  <suite started-at="2025-08-06T17:57:02 IST" name="Default suite" finished-at="2025-08-06T17:57:08 IST" duration-ms="5568">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Hybrid_Test_Runner@c0c2f8d]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-08-06T17:41:15 IST" name="Default test" finished-at="2025-08-06T17:42:29 IST" duration-ms="73793">
-      <class name="Hybrid_Test_Runner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Hybrid_Test_Runner@c0c2f8d]" started-at="2025-08-06T17:41:16 IST" name="setUpClass" finished-at="2025-08-06T17:41:17 IST" duration-ms="1404" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@289fdb08]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2025-08-06T17:57:02 IST" name="Default test" finished-at="2025-08-06T17:57:08 IST" duration-ms="5568">
+      <class name="stepdefinitions.Login_steps">
+        <test-method signature="browser_launch()[pri:0, instance:stepdefinitions.Login_steps@3eb25e1a]" started-at="2025-08-06T17:57:02 IST" name="browser_launch" finished-at="2025-08-06T17:57:07 IST" duration-ms="4820" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Hybrid_Test_Runner@c0c2f8d]" started-at="2025-08-06T17:41:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-06T17:41:41 IST" duration-ms="23978" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[""]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Funtionality Testing"]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- browser_launch -->
+        <test-method signature="close_browser()[pri:0, instance:stepdefinitions.Login_steps@3eb25e1a]" started-at="2025-08-06T17:57:07 IST" name="close_browser" finished-at="2025-08-06T17:57:08 IST" depends-on-methods="stepdefinitions.Login_steps.browser_launch" duration-ms="458" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Hybrid_Test_Runner@c0c2f8d]" started-at="2025-08-06T17:41:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-06T17:41:55 IST" duration-ms="14204" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Testing login with different data"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Funtionality Testing"]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- close_browser -->
+        <test-method signature="open_url()[pri:0, instance:stepdefinitions.Login_steps@3eb25e1a]" started-at="2025-08-06T17:57:08 IST" name="open_url" finished-at="2025-08-06T17:57:08 IST" depends-on-methods="stepdefinitions.Login_steps.browser_launch" duration-ms="27" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.66, chrome: {chromedriverVersion: 139.0.7258.66 (a62d32994769..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60943}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60943/devtoo..., se:cdpVersion: 139.0.7258.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.66, chrome: {chromedriverVersion: 139.0.7258.66 (a62d32994769..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60943}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60943/devtoo..., se:cdpVersion: 139.0.7258.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:176)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:312)
+at stepdefinitions.Login_steps.open_url(Login_steps.java:28)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Hybrid_Test_Runner@c0c2f8d]" started-at="2025-08-06T17:41:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-06T17:42:08 IST" duration-ms="12464" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Testing login with different data"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Funtionality Testing"]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- open_url -->
+        <test-method signature="login()[pri:0, instance:stepdefinitions.Login_steps@3eb25e1a]" started-at="2025-08-06T17:57:08 IST" name="login" finished-at="2025-08-06T17:57:08 IST" depends-on-methods="stepdefinitions.Login_steps.open_url" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method stepdefinitions.Login_steps.login() on instance stepdefinitions.Login_steps@3eb25e1a depends on not successfully finished methods 
+[stepdefinitions.Login_steps.open_url() on instance stepdefinitions.Login_steps@3eb25e1a]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method stepdefinitions.Login_steps.login() on instance stepdefinitions.Login_steps@3eb25e1a depends on not successfully finished methods 
+[stepdefinitions.Login_steps.open_url() on instance stepdefinitions.Login_steps@3eb25e1a]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Hybrid_Test_Runner@c0c2f8d]" started-at="2025-08-06T17:42:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-06T17:42:19 IST" duration-ms="10994" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Testing login with different data"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Funtionality Testing"]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- login -->
+        <test-method signature="password(java.lang.String)[pri:0, instance:stepdefinitions.Login_steps@3eb25e1a]" started-at="2025-08-06T17:57:08 IST" name="password" finished-at="2025-08-06T17:57:08 IST" depends-on-methods="stepdefinitions.Login_steps.open_url" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method stepdefinitions.Login_steps.password() on instance stepdefinitions.Login_steps@3eb25e1a depends on not successfully finished methods 
+[stepdefinitions.Login_steps.open_url() on instance stepdefinitions.Login_steps@3eb25e1a]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method stepdefinitions.Login_steps.password() on instance stepdefinitions.Login_steps@3eb25e1a depends on not successfully finished methods 
+[stepdefinitions.Login_steps.open_url() on instance stepdefinitions.Login_steps@3eb25e1a]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Hybrid_Test_Runner@c0c2f8d]" started-at="2025-08-06T17:42:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-06T17:42:29 IST" duration-ms="10283" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Testing login with different data"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Funtionality Testing"]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- password -->
+        <test-method signature="username(java.lang.String)[pri:0, instance:stepdefinitions.Login_steps@3eb25e1a]" started-at="2025-08-06T17:57:08 IST" name="username" finished-at="2025-08-06T17:57:08 IST" depends-on-methods="stepdefinitions.Login_steps.open_url" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method stepdefinitions.Login_steps.username() on instance stepdefinitions.Login_steps@3eb25e1a depends on not successfully finished methods 
+[stepdefinitions.Login_steps.open_url() on instance stepdefinitions.Login_steps@3eb25e1a]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method stepdefinitions.Login_steps.username() on instance stepdefinitions.Login_steps@3eb25e1a depends on not successfully finished methods 
+[stepdefinitions.Login_steps.open_url() on instance stepdefinitions.Login_steps@3eb25e1a]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Hybrid_Test_Runner@c0c2f8d]" started-at="2025-08-06T17:42:29 IST" name="tearDownClass" finished-at="2025-08-06T17:42:29 IST" duration-ms="8" status="PASS">
+        </test-method> <!-- username -->
+        <test-method signature="valid_password(java.lang.String)[pri:0, instance:stepdefinitions.Login_steps@3eb25e1a]" started-at="2025-08-06T17:57:08 IST" name="valid_password" finished-at="2025-08-06T17:57:08 IST" depends-on-methods="stepdefinitions.Login_steps.open_url" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method stepdefinitions.Login_steps.valid_password() on instance stepdefinitions.Login_steps@3eb25e1a depends on not successfully finished methods 
+[stepdefinitions.Login_steps.open_url() on instance stepdefinitions.Login_steps@3eb25e1a]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method stepdefinitions.Login_steps.valid_password() on instance stepdefinitions.Login_steps@3eb25e1a depends on not successfully finished methods 
+[stepdefinitions.Login_steps.open_url() on instance stepdefinitions.Login_steps@3eb25e1a]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- Hybrid_Test_Runner -->
+        </test-method> <!-- valid_password -->
+        <test-method signature="valid_username(java.lang.String)[pri:0, instance:stepdefinitions.Login_steps@3eb25e1a]" started-at="2025-08-06T17:57:08 IST" name="valid_username" finished-at="2025-08-06T17:57:08 IST" depends-on-methods="stepdefinitions.Login_steps.open_url" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method stepdefinitions.Login_steps.valid_username() on instance stepdefinitions.Login_steps@3eb25e1a depends on not successfully finished methods 
+[stepdefinitions.Login_steps.open_url() on instance stepdefinitions.Login_steps@3eb25e1a]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method stepdefinitions.Login_steps.valid_username() on instance stepdefinitions.Login_steps@3eb25e1a depends on not successfully finished methods 
+[stepdefinitions.Login_steps.open_url() on instance stepdefinitions.Login_steps@3eb25e1a]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- valid_username -->
+        <test-method signature="homepage()[pri:0, instance:stepdefinitions.Login_steps@3eb25e1a]" started-at="2025-08-06T17:57:08 IST" name="homepage" finished-at="2025-08-06T17:57:08 IST" depends-on-methods="stepdefinitions.Login_steps.login" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method stepdefinitions.Login_steps.homepage() on instance stepdefinitions.Login_steps@3eb25e1a depends on not successfully finished methods 
+[stepdefinitions.Login_steps.login() on instance stepdefinitions.Login_steps@3eb25e1a]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method stepdefinitions.Login_steps.homepage() on instance stepdefinitions.Login_steps@3eb25e1a depends on not successfully finished methods 
+[stepdefinitions.Login_steps.login() on instance stepdefinitions.Login_steps@3eb25e1a]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homepage -->
+        <test-method signature="invalid_credentials()[pri:0, instance:stepdefinitions.Login_steps@3eb25e1a]" started-at="2025-08-06T17:57:08 IST" name="invalid_credentials" finished-at="2025-08-06T17:57:08 IST" depends-on-methods="stepdefinitions.Login_steps.login" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method stepdefinitions.Login_steps.invalid_credentials() on instance stepdefinitions.Login_steps@3eb25e1a depends on not successfully finished methods 
+[stepdefinitions.Login_steps.login() on instance stepdefinitions.Login_steps@3eb25e1a]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method stepdefinitions.Login_steps.invalid_credentials() on instance stepdefinitions.Login_steps@3eb25e1a depends on not successfully finished methods 
+[stepdefinitions.Login_steps.login() on instance stepdefinitions.Login_steps@3eb25e1a]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalid_credentials -->
+      </class> <!-- stepdefinitions.Login_steps -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

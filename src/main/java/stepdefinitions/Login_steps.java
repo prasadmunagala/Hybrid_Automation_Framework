@@ -22,7 +22,7 @@ public class Login_steps {
 	}
 	
 	@Test(dependsOnMethods="browser_launch")
-	@When("the app url enters it has to open")
+	@When("The app url enters it has to open")
 	public void open_url()
 	{
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
