@@ -1,23 +1,26 @@
 package stepdefinitions;
 
-import PageObjects.LoginFeature;
+import PageObjects.LoginFeature; 
 
 import java.time.Duration;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+
+import Base.BaseClass;
 import io.cucumber.java.en.*;
 import junit.framework.Assert;
 
 public class Login_steps {
 	
-	ChromeDriver driver;
+	WebDriver driver;
 	
 	@Test
 	@Given("Browser has launched")
 	public void browser_launch()
 	{
-		driver=new ChromeDriver();
+		driver=BaseClass.driver;
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
@@ -93,7 +96,7 @@ public class Login_steps {
 	}
 	
 	@Test(dependsOnMethods="browser_launch")
-	@Then("close the bowser")
+	@Then("close the browser")
 	public void close_browser()
 	{
 		driver.quit();

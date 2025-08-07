@@ -7,7 +7,7 @@ Feature: Login Funtionality Testing
 		And if user enters valid password "admin123"
 		And if user clicks on login button
 		Then homepage shoud be displayed
-		Then close the bowser
+		Then close the browser
 
 	Scenario Outline: Testing login with different data
 		Given Browser has launched
@@ -16,7 +16,7 @@ Feature: Login Funtionality Testing
 		And if user enters password "<password>"
 		And if user clicks on login button
 		Then homepage shoud not be displayed
-		Then close the bowsers
+		Then close the browser
 		
 		Examples:
 		 	| username | password |
