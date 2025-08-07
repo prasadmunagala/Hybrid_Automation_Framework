@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="10" passed="2" failed="1" skipped="7">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-07T10:52:36 IST" name="Default suite" finished-at="2025-08-07T10:52:39 IST" duration-ms="3059">
+  <suite started-at="2025-08-07T12:46:15 IST" name="Default suite" finished-at="2025-08-07T12:46:27 IST" duration-ms="12839">
     <groups>
     </groups>
-    <test started-at="2025-08-07T10:52:36 IST" name="Default test" finished-at="2025-08-07T10:52:39 IST" duration-ms="3059">
+    <test started-at="2025-08-07T12:46:15 IST" name="Default test" finished-at="2025-08-07T12:46:27 IST" duration-ms="12839">
       <class name="stepdefinition.login_steps">
-        <test-method signature="browser_launch()[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T10:52:36 IST" name="browser_launch" finished-at="2025-08-07T10:52:38 IST" duration-ms="2675" status="PASS">
+        <test-method signature="browser_launch()[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T12:46:15 IST" name="browser_launch" finished-at="2025-08-07T12:46:27 IST" duration-ms="12416" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browser_launch -->
-        <test-method signature="close_browser()[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T10:52:38 IST" name="close_browser" finished-at="2025-08-07T10:52:39 IST" depends-on-methods="stepdefinition.login_steps.browser_launch" duration-ms="273" status="PASS">
+        <test-method signature="close_browser()[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T12:46:27 IST" name="close_browser" finished-at="2025-08-07T12:46:27 IST" depends-on-methods="stepdefinition.login_steps.browser_launch" duration-ms="267" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close_browser -->
-        <test-method signature="open_url()[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T10:52:39 IST" name="open_url" finished-at="2025-08-07T10:52:39 IST" depends-on-methods="stepdefinition.login_steps.browser_launch" duration-ms="12" status="FAIL">
+        <test-method signature="open_url()[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T12:46:27 IST" name="open_url" finished-at="2025-08-07T12:46:27 IST" depends-on-methods="stepdefinition.login_steps.browser_launch" duration-ms="17" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
               <![CDATA[Session ID is null. Using WebDriver after calling quit()?
@@ -23,7 +23,7 @@ Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Command: [null, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\chand\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65261}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65261/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\chand\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50103}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50103/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
@@ -31,7 +31,7 @@ Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Command: [null, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\chand\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65261}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65261/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\chand\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50103}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50103/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:176)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
@@ -70,7 +70,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- open_url -->
-        <test-method signature="login()[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T10:52:39 IST" name="login" finished-at="2025-08-07T10:52:39 IST" depends-on-methods="stepdefinition.login_steps.open_url" duration-ms="1" status="SKIP">
+        <test-method signature="login()[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T12:46:27 IST" name="login" finished-at="2025-08-07T12:46:27 IST" depends-on-methods="stepdefinition.login_steps.open_url" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method stepdefinition.login_steps.login() on instance stepdefinition.login_steps@3eb25e1a depends on not successfully finished methods 
@@ -104,7 +104,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="password(java.lang.String)[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T10:52:39 IST" name="password" finished-at="2025-08-07T10:52:39 IST" depends-on-methods="stepdefinition.login_steps.open_url" duration-ms="0" status="SKIP">
+        <test-method signature="password(java.lang.String)[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T12:46:27 IST" name="password" finished-at="2025-08-07T12:46:27 IST" depends-on-methods="stepdefinition.login_steps.open_url" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method stepdefinition.login_steps.password() on instance stepdefinition.login_steps@3eb25e1a depends on not successfully finished methods 
@@ -138,7 +138,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- password -->
-        <test-method signature="username(java.lang.String)[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T10:52:39 IST" name="username" finished-at="2025-08-07T10:52:39 IST" depends-on-methods="stepdefinition.login_steps.open_url" duration-ms="0" status="SKIP">
+        <test-method signature="username(java.lang.String)[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T12:46:27 IST" name="username" finished-at="2025-08-07T12:46:27 IST" depends-on-methods="stepdefinition.login_steps.open_url" duration-ms="1" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method stepdefinition.login_steps.username() on instance stepdefinition.login_steps@3eb25e1a depends on not successfully finished methods 
@@ -172,7 +172,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- username -->
-        <test-method signature="valid_password(java.lang.String)[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T10:52:39 IST" name="valid_password" finished-at="2025-08-07T10:52:39 IST" depends-on-methods="stepdefinition.login_steps.open_url" duration-ms="0" status="SKIP">
+        <test-method signature="valid_password(java.lang.String)[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T12:46:27 IST" name="valid_password" finished-at="2025-08-07T12:46:27 IST" depends-on-methods="stepdefinition.login_steps.open_url" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method stepdefinition.login_steps.valid_password() on instance stepdefinition.login_steps@3eb25e1a depends on not successfully finished methods 
@@ -206,7 +206,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- valid_password -->
-        <test-method signature="valid_username(java.lang.String)[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T10:52:39 IST" name="valid_username" finished-at="2025-08-07T10:52:39 IST" depends-on-methods="stepdefinition.login_steps.open_url" duration-ms="0" status="SKIP">
+        <test-method signature="valid_username(java.lang.String)[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T12:46:27 IST" name="valid_username" finished-at="2025-08-07T12:46:27 IST" depends-on-methods="stepdefinition.login_steps.open_url" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method stepdefinition.login_steps.valid_username() on instance stepdefinition.login_steps@3eb25e1a depends on not successfully finished methods 
@@ -240,7 +240,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- valid_username -->
-        <test-method signature="homepage()[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T10:52:39 IST" name="homepage" finished-at="2025-08-07T10:52:39 IST" depends-on-methods="stepdefinition.login_steps.login" duration-ms="1" status="SKIP">
+        <test-method signature="homepage()[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T12:46:27 IST" name="homepage" finished-at="2025-08-07T12:46:27 IST" depends-on-methods="stepdefinition.login_steps.login" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method stepdefinition.login_steps.homepage() on instance stepdefinition.login_steps@3eb25e1a depends on not successfully finished methods 
@@ -274,7 +274,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- homepage -->
-        <test-method signature="invalid_credentials()[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T10:52:39 IST" name="invalid_credentials" finished-at="2025-08-07T10:52:39 IST" depends-on-methods="stepdefinition.login_steps.login" duration-ms="0" status="SKIP">
+        <test-method signature="invalid_credentials()[pri:0, instance:stepdefinition.login_steps@3eb25e1a]" started-at="2025-08-07T12:46:27 IST" name="invalid_credentials" finished-at="2025-08-07T12:46:27 IST" depends-on-methods="stepdefinition.login_steps.login" duration-ms="2" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method stepdefinition.login_steps.invalid_credentials() on instance stepdefinition.login_steps@3eb25e1a depends on not successfully finished methods 
