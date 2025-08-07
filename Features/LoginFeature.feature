@@ -16,7 +16,7 @@ Feature: Login Funtionality Testing
 		And if user enters password "<password>"
 		And if user clicks on login button
 		Then homepage shoud not be displayed
-		Then close the browsers
+		Then close the browser
 		
 		Examples:
 		 	| username | password |
