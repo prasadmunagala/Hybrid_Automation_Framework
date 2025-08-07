@@ -16,7 +16,7 @@ Feature: Login Funtionality Testing
 		And if user enters password "<password>"
 		And if user clicks on login button
 		Then homepage shoud not be displayed
-		Then close the bowser
+		Then close the bowsers
 		
 		Examples:
 		 	| username | password |
