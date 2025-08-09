@@ -1,16 +1,17 @@
 package stepdefinitions;
 
-import PageObjects.LoginFeature; 
+import PageObjects.LoginFeature;  
 
 import java.time.Duration;
+import java.util.ArrayList;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
-
-import Base.BaseClass;
+import utilities.ExcelData;
 import io.cucumber.java.en.*;
 import junit.framework.Assert;
+import utilities.DatabaseCon;
 
 public class Login_steps {
 	
@@ -20,7 +21,7 @@ public class Login_steps {
 	@Given("Browser has launched")
 	public void browser_launch()
 	{
-		driver=BaseClass.driver;
+		driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
@@ -35,17 +36,31 @@ public class Login_steps {
 	@Then("if user enters valid username {string}")
 	public void valid_username(String username)
 	{
+		ExcelData data=new ExcelData();
+		ArrayList<ArrayList<Object>> xdata=data.exceldata();
+		
+		String xusername=xdata.get(1).get(0).toString();
+		
+		
 		LoginFeature lg=new LoginFeature(driver);
-		lg.username(username);
-	}
+		lg.username(xusername);
+		
 	
+		
+	}
+
 
 	@Test(dependsOnMethods="open_url")
 	@Then("if user enters valid password {string}")
 	public void valid_password(String password)
 	{
+		ExcelData data=new ExcelData();
+		ArrayList<ArrayList<Object>> xdata=data.exceldata();
+		
+		String xpassword=xdata.get(1).get(1).toString(); 
+		
 		LoginFeature lg=new LoginFeature(driver);
-		lg.password(password);
+		lg.password(xpassword);
 	}
 	
 	@Test(dependsOnMethods="open_url")
