@@ -3,29 +3,6 @@
 <suite name="MasterSuite">
 	
 	<test name="chrometest">
-		<parameter name="browser" value="chrome"/>
-		<classes>
-			<class name="Base.BaseClass"/>
-			<class name="Hybrid_Test_Runner"/>
-		</classes>
-	</test>
-	
-	<test name="edgetest">
-		<parameter name="browser" value="edge"/>
-		<classes>
-			<class name="Hybrid_Test_Runner"/>
-		</classes>
-	</test>
-	
-	<test name="safaritest">
-		<parameter name="browser" value="safari"/>
-		<classes>
-			<class name="Hybrid_Test_Runner"/>
-		</classes>
-	</test>
-	
-	<test name="firefoxtest">
-		<parameter name="browser" value="firefox"/>
 		<classes>
 			<class name="Hybrid_Test_Runner"/>
 		</classes>
