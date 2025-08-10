@@ -1,27 +1,41 @@
 package stepdefinitions;
 
-import PageObjects.LoginFeature;  
-
 import java.time.Duration;
 import java.util.ArrayList;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import utilities.ExcelData;
-import io.cucumber.java.en.*;
+
+import API_Testing_Code.APITesting;
+import Base.CrossBrowser;
+import HelperClasses.ExcelHelper;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import junit.framework.Assert;
-import utilities.DatabaseCon;
+import utilities.ExcelData;
+
+import PageObjects.LoginFeature;
+
 
 public class Login_steps {
 	
 	WebDriver driver;
 	
-	@Test
+	
+	@Test()
 	@Given("Browser has launched")
 	public void browser_launch()
 	{
-		driver=new ChromeDriver();
+		ChromeOptions ops=new ChromeOptions();
+		ops.addArguments("--headless");
+		
+		CrossBrowser cb=new CrossBrowser();
+		driver=cb.initializeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
@@ -36,14 +50,12 @@ public class Login_steps {
 	@Then("if user enters valid username {string}")
 	public void valid_username(String username)
 	{
-		ExcelData data=new ExcelData();
-		ArrayList<ArrayList<Object>> xdata=data.exceldata();
 		
-		String xusername=xdata.get(1).get(0).toString();
-		
+//		APITesting ap=new APITesting();
+//		String api_username=ap.api_username();
 		
 		LoginFeature lg=new LoginFeature(driver);
-		lg.username(xusername);
+		lg.username(username);
 		
 	
 		
@@ -54,16 +66,11 @@ public class Login_steps {
 	@Then("if user enters valid password {string}")
 	public void valid_password(String password)
 	{
-		ExcelData data=new ExcelData();
-		ArrayList<ArrayList<Object>> xdata=data.exceldata();
-		
-		String xpassword=xdata.get(1).get(1).toString(); 
 		
 		LoginFeature lg=new LoginFeature(driver);
-		lg.password(xpassword);
+		lg.password(password);
 	}
 	
-	@Test(dependsOnMethods="open_url")
 	@Then("if user enters username {string}")
 	public void username(String username)
 	{
@@ -71,7 +78,6 @@ public class Login_steps {
 		lg.username(username);
 	}
 	
-	@Test(dependsOnMethods="open_url")
 	@And("if user enters password {string}")
 	public void password(String password)
 	{

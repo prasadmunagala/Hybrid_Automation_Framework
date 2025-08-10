@@ -8,7 +8,10 @@ import utilities.ExcelData;
 
 public class ExcelHelper {
 	
-	public static void main(String s[])
+	
+	
+	@DataProvider
+	public Object[][] xl_data()
 	{
 		ExcelData exdata=new ExcelData();
 		ArrayList<ArrayList<Object>> xdata=exdata.exceldata();
@@ -18,23 +21,9 @@ public class ExcelHelper {
 		{
 			data[i][0]=xdata.get(i);
 		}
-		
-		System.out.println(data[0][0].toString());
+		return data;
 	}
 	
-//	@DataProvider
-//	public Object[][] xl_data()
-//	{
-//		ExcelData exdata=new ExcelData();
-//		ArrayList<ArrayList<Object>> xdata=exdata.exceldata();
-//		
-//		Object[][] data=new Object[xdata.size()][1];
-//		for(int i=1;i<xdata.size();i++)
-//		{
-//			data[i][0]=xdata.get(i);
-//		}
-		
-//		return data;
-//	}
+
 
 }
