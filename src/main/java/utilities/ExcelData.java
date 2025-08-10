@@ -30,7 +30,9 @@ public class ExcelData {
 		int sheets_count=workbook.getNumberOfSheets();
 		
 		
-		for(int i=0;i<workbook.getNumberOfSheets();i++)
+		int rowCount=0;
+		
+		for(int i=0;i<sheets_count;i++)
 		{
 			Sheet sheet=workbook.getSheetAt(i);
 			
@@ -39,32 +41,41 @@ public class ExcelData {
 			
 			for(Row row:sheet)
 			{
-				temp_data=new ArrayList<>();
 				
-				for(Cell cell:row)
+				if(rowCount!=0) 
 				{
-						
-					switch(cell.getCellType())
+
+					temp_data=new ArrayList<>();
+					for(Cell cell:row)
 					{
-						case NUMERIC:
-							int idata=(int)cell.getNumericCellValue();
-							temp_data.add(idata);
-							break;
+						
 							
-						case STRING:
-							String sdata=cell.getStringCellValue();
-							temp_data.add(sdata);
-							break;
-							
-						case BOOLEAN:
-							boolean bdata=cell.getBooleanCellValue();
-							temp_data.add(bdata);
-							break;
+							switch(cell.getCellType())
+							{
+								case NUMERIC:
+									int idata=(int)cell.getNumericCellValue();
+									temp_data.add(idata);
+									break;
+									
+								case STRING:
+									String sdata=cell.getStringCellValue();
+									temp_data.add(sdata);
+									break;
+									
+								case BOOLEAN:
+									boolean bdata=cell.getBooleanCellValue();
+									temp_data.add(bdata);
+									break;
+							}
 					}
-					
+					excel_data.add(temp_data);
+				
+				}
+				else
+				{
+					rowCount++;
 				}
 				
-				excel_data.add(temp_data);
 				
 			}
 		

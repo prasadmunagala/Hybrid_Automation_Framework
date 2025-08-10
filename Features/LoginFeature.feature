@@ -3,7 +3,7 @@ Feature: Login Funtionality Testing
 	Scenario:
 		Given Browser has launched
 		When the app url enters it has to open
-		Then if user enters valid username "Admin "
+		Then if user enters valid username "Admin"
 		And if user enters valid password "admin123"
 		And if user clicks on login button
 		Then homepage shoud be displayed
