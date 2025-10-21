@@ -23,4 +23,4 @@ Feature: Login Funtionality Testing
 		 	| Admin1   | admin123 |
 		 	| Admin    | admin13  |
 		 	| Admin1   | admin13  |
-		 	|          |          |
+		Santhosh  	|          |          |
