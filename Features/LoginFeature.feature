@@ -8,6 +8,7 @@ Feature: Login Funtionality Testing
 		And if user clicks on login button
 		Then homepage shoud be displayed
 		Then close the browser
+		Then Action completed
 
 	Scenario Outline: Testing login with different data
 		Given Browser has launched
