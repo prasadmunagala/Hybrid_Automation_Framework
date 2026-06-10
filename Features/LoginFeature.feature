@@ -19,6 +19,7 @@ Feature: Login Funtionality Testing
 		And if user clicks on login button
 		Then homepage shoud not be displayed
 		Then close the browser
+		Then close the project
 		
 		Examples:
 		 	| username | password |
