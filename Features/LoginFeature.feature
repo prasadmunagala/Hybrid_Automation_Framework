@@ -9,7 +9,7 @@ Feature: Login Funtionality Testing
 		Then homepage shoud be displayed
 		Then close the browser
 		Then Action completed
-		The finally done
+		The finally done all
 		
 
 	Scenario Outline: Testing login with different data
